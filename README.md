@@ -1,4 +1,4 @@
-# Katze Pmod&trade; compatible module
+# Katze Ethernet Pmod&trade; compatible module
 
 Katze is a work-in-progress 10/100 Ethernet PHY PMOD designed to be compatible with LiteX.
 
