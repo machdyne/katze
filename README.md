@@ -6,8 +6,6 @@ Katze is a work-in-progress 10/100 Ethernet PHY PMOD designed to be compatible w
 
 This repo contains schematics, pinouts and usage examples.
 
-**Note: As of Jan 2023 this is not yet working as expected.**
-
 ## Usage
 
 ### Example Litex Platform Configuration
