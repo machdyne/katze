@@ -10,6 +10,8 @@ Find more information on the [Katze product page](https://machdyne.com/product/k
 
 ## Usage
 
+At the moment it is necessary to use [our fork of LiteEth](https://github.com/machdyne/liteeth) which adds support for setting the configuration straps during reset. There are more details in this [pull request](https://github.com/enjoy-digital/liteeth/pull/126).
+
 ### Example Litex Platform Configuration
 
 ```
@@ -35,6 +37,7 @@ Find more information on the [Katze product page](https://machdyne.com/product/k
 		clock_pads = platform.request("eth_clocks"),
 		pads = platform.request("eth"),
 		with_hw_init_reset=True,
+		hw_init_mode_cfg=[1,1,1],
 		refclk_cd=None)
 	self.add_ethernet(phy=self.ethphy)
 ```
