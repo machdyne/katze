@@ -10,8 +10,6 @@ Find more information on the [Katze product page](https://machdyne.com/product/k
 
 ## Usage
 
-At the moment it is necessary to use [our fork of LiteEth](https://github.com/machdyne/liteeth) which adds support for setting the configuration straps during reset. There are more details in this [pull request](https://github.com/enjoy-digital/liteeth/pull/126).
-
 ### Example Litex Platform Configuration
 
 ```
@@ -20,10 +18,10 @@ At the moment it is necessary to use [our fork of LiteEth](https://github.com/ma
 		IOStandard("LVCMOS33")
 	),
 	("eth", 0,
-		Subsignal("rx_data", Pins("PMOD:4 PMOD:5")),
+		Subsignal("rx_data", Pins("PMOD:4 PMOD:5"), Misc("PULLMODE=UP")),
 		Subsignal("tx_data", Pins("PMOD:0 PMOD:1")),
 		Subsignal("tx_en", Pins("PMOD:2")),
-		Subsignal("crs_dv", Pins("PMOD:3")),
+		Subsignal("crs_dv", Pins("PMOD:3"), Misc("PULLMODE=UP")),
 		Subsignal("rst_n", Pins("PMOD:6")),
 		IOStandard("LVCMOS33")
 	)
